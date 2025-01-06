@@ -258,39 +258,7 @@ print(response.json())
 
 ---
 
-### 8. **Регистрация через внешние сервисы**
-#### **POST /login**
-
-##### Описание:
-Этот эндпоинт используется для регистрации пользователя через внешние сервисы, такие как Yandex или GitHub.
-
-##### Параметры запроса:
-- `session_token` (строка) — Токен сессии.
-- `type` (строка) — Тип внешнего сервиса для регистрации.
-
-##### Пример запроса на Python:
-```python
-import requests
-
-session_token = "your_session_token"
-url = "http://yourserver.com/registration"
-data = {
-    "session_token": session_token,
-    "type": "github"
-}
-
-response = requests.post(url, json=data)
-print(response.json())
-```
-
-##### Ответ:
-- **200 OK** — Вход прошел успешно.
-- **400 Bad Request** — Токен сессии не найден или код неверный.
-- **500 Internal Server Error** — Ошибка на сервере.
-
----
-
-### 9. **Выход из системы**
+### 8. **Выход из системы**
 #### **POST /logout**
 
 ##### Описание:
